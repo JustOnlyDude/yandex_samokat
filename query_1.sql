@@ -1,0 +1,1 @@
+SELECT "courierId" FROM "Orders" WHERE "inDelivery" = true GROUP BY "courierId";
