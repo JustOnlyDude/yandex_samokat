@@ -19,11 +19,5 @@ def create_order(body):
     return requests.post(configuration.URL_BASE + configuration.ORDER_CREAT, json=body, headers=data.headers)
 
 
-
-
-
 def get_order_by_track(track):
      return requests.get(configuration.URL_BASE + configuration.ORDER_BY_TRACK, params={'t': track})
-
-
-
