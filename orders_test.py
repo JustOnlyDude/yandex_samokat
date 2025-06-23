@@ -3,6 +3,8 @@ import configuration
 import create_order_request
 import requests
 
+# Дмитрий Тазов, 31-я когорта — Финальный проект. Инженер по тестированию плюс
+
 def test_check_order_created():
     order_body=create_order_request.get_order_body("Васек", "Безымянный", "Без адресный", '204', '+7 800 555 35 35','2025-06-06')
     order_response=create_order_request.create_order(order_body)
