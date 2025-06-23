@@ -11,8 +11,10 @@ def test_check_order_created():
     print(order_response.json())
 
     assert order_response.status_code==201, f"Ожидался статус 201, получили {order_response.status_code}"
+    
     response_track = order_response.json()['track']
     order_done = create_order_request.get_order_by_track(response_track)
+    assert order_done.status_code == 200
 
 
 

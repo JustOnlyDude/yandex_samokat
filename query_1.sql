@@ -1,1 +1,1 @@
-SELECT "courierId" FROM "Orders" WHERE "inDelivery" = true GROUP BY "courierId";
+SELECT c.login, COUNT (ord.track) FROM "Couriers" AS c LEFT OUTER JOIN "Orders" AS ord ON c.id = ord."courierId"  WHERE "inDelivery" = true GROUP BY c.login ORDER BY c.login LIMIT 5;

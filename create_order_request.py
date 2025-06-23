@@ -17,17 +17,13 @@ def get_order_body (first_name, last_name, address, metro_station, phone, delive
 
 def create_order(body):
     return requests.post(configuration.URL_BASE + configuration.ORDER_CREAT, json=body, headers=data.headers)
-response = create_order(data.order_body)
-response_order_track = response.json()['track']
-print(response.status_code)
-print(response.json())
+
+
 
 
 
 def get_order_by_track(track):
      return requests.get(configuration.URL_BASE + configuration.ORDER_BY_TRACK, params={'t': track})
-response_order_done=get_order_by_track(response_order_track)
-print(response_order_done.status_code)
-print(response_order_track)
-print(response_order_done.json())
+
+
 
